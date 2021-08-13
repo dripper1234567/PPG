@@ -9,4 +9,13 @@ def generate(length=8):
 
 
 if __name__ == "__main__":
-    print(generate())
+    incorrect = True
+    length = 0
+    while incorrect:
+        try:
+            length = input("enter password length")
+            incorrect = False
+        except TypeError:
+            incorrect = True
+
+    print(generate(length))
